@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-dic-2020 14:30:02 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="domain.Question" table="QUESTION">
+        <id name="questionNumber" type="java.lang.Integer">
+            <column name="QUESTIONNUMBER" />
+            <generator class="increment" />
+        </id>
+        <property name="question" type="java.lang.String">
+            <column name="QUESTION" />
+        </property>
+        <property name="betMinimum" type="float">
+            <column name="BETMINIMUM" />
+        </property>
+        <property name="result" type="java.lang.String">
+            <column name="RESULT" />
+        </property>
+        <many-to-one name="event" class="domain.Event" fetch="join" lazy="false">
+            <column name="EVENT" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

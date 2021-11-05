@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view>
+	<h:head>
+		<title>Query</title>
+		<h:outputStylesheet library="css" name="style.css" />
+	</h:head>
+	<h:body>
+		<h:form>
+			<table class="table">
+				<tr>
+					<th>
+						<h2>Event date</h2>
+					</th>
+					<th><h:message>Events: </h:message></th>
+				</tr>
+				<tr>
+					<td><p:calendar id="fecha" value="#{bets.fecha}"
+							navigator="false" mode="inline">
+							<p:ajax event="dateSelect" listener="#{bets.onDateSelect}"
+								update="SelectorEventos, tabla"></p:ajax>
+						</p:calendar></td>
+					<td><h:selectOneMenu value="#{bets.event}"
+							id="SelectorEventos" converter="ConvertidorEventoString"
+							class="selector">
+							<f:selectItems value="#{bets.eventos}" />
+							<f:ajax event="change" listener="#{bets.onEventSelect}"
+								render="tabla"></f:ajax>
+						</h:selectOneMenu></td>
+				</tr>
+			</table>
+			<div class="questionTable">
+				<h:dataTable id="tabla" value="#{bets.questions}" var="Question"
+					border="1">
+					<f:facet name="header">Questions:</f:facet>
+					<h:column>
+						<f:facet name="header">Number</f:facet>
+						#{Question.questionNumber}
+						</h:column>
+					<h:column>
+						<f:facet name="header">Question</f:facet>
+						#{Question.question}
+					</h:column>
+				</h:dataTable>
+			</div>
+			<div class="buttons">
+				<h:commandButton value="Close" action="#{bets.close()}"
+					class="button" />
+			</div>
+		</h:form>
+	</h:body>
+</f:view>
+</html>

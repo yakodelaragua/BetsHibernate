@@ -1,0 +1,96 @@
+body {
+	background-color: #3e3e3e;
+	font-family: verdana;
+	text-align: center;
+	color: white;
+}
+
+h1, h2 {
+	color: #ff62e3;
+}
+
+.button {
+	display: block;
+	width: 100%;
+	height: 72.5px;
+	align-item: center;
+	background-color: white;
+	border-radius: 10px;
+	font-family: verdana;
+	font-size: 20px;
+}
+
+.button:hover {
+	background-color: #ffd9f9;
+	color: #770062;
+	width: 105%;
+	height: 75px;
+	margin: 0 -2.5% 0;
+	font-size: 25px;
+}
+
+.selector {
+	background-color: #3e3e3e;
+	color: #ff62e3;
+	font-size: 17px;
+}
+
+.ui-datepicker-calendar * {
+	background-color: #3e3e3e;
+}
+
+.ui-datepicker-calendar thead {
+	color: #ff62e3;
+}
+
+.ui-datepicker-calendar tbody:nth-child(2) a {
+	color: #bcbcbc !important;
+}
+
+#fecha>* {
+	color: #ff62e3;
+}
+
+.table {
+	display: block;
+	border-style: solid;
+	border-color: #ff62e3;
+	border-radius: 15px;
+	padding: 2.5% 10% 2.5%;
+	margin: 0 20% 0;
+}
+
+.form, .buttons {
+	display: block;
+	border-style: solid;
+	border-color: #ff62e3;
+	border-radius: 15px;
+	padding: 2% 8% 2%;
+	margin: 2% 30% 2%;
+}
+
+.questionTable {
+	display: block;
+	border-style: solid;
+	border-color: #ff62e3;
+	border-width: 3px;
+	border-radius: 15px;
+	padding: 2% 20% 2%;
+	margin: 2% 15% 2%;
+	
+}
+
+#j_id260803968_f8b8d0b\:lPreguntaCreada>li:nth-child(1)>span:nth-child(1)
+	{
+	color: #ff59cd;
+	font-size: 25px;
+	margin-left: -10px;
+}
+
+.message {
+	color: white;
+}
+
+.credits {
+	margin-top: 400px;
+}

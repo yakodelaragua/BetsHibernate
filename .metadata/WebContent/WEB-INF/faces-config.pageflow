@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16055283034690" configfile="/BetsJSF/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="Bets.xhtml" x="288" y="336" id="pf16055311350506" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" outlinks="pf16055311498889 pf160553114988910" inlinks="pf16058701451390 pf16058706193591" path="/Bets.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Create.xhtml" x="576" y="252" id="pf16055311350507" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf16058706193591" inlinks="pf16055311498889" path="/Create.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Query.xhtml" x="577" y="439" id="pf16055311350508" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf16058701451390" inlinks="pf160553114988910" path="/Query.xhtml"/>
+  <links id="pf16055311498889" target="pf16055311350507" source="pf16055311350506" outcome="create"/>
+  <links id="pf160553114988910" target="pf16055311350508" source="pf16055311350506" outcome="query"/>
+  <links id="pf16058701451390" target="pf16055311350506" source="pf16055311350508" outcome="close"/>
+  <links id="pf16058706193591" target="pf16055311350506" source="pf16055311350507" outcome="close"/>
+</pageflow:Pageflow>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-dic-2020 14:30:02 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="domain.Event" table="EVENT">
+        <id name="eventNumber" type="java.lang.Integer">
+            <column name="EVENTNUMBER" />
+            <generator class="increment" />
+        </id>
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
+        </property>
+        <property name="eventDate" type="java.util.Date">
+            <column name="EVENTDATE" />
+        </property>
+        <list name="questions" inverse="false" table="QUESTION" lazy="false">
+            <key>
+                <column name="EVENTNUMBER" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="domain.Question" />
+        </list>
+    </class>
+</hibernate-mapping>
